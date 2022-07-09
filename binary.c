@@ -13,5 +13,5 @@ void rec_bin(int i)
 		;
 	else
 		rec_bin(i / 2);
-	putchar((i % 2) + '0');
+	_putchar((i % 2) + '0');
 }

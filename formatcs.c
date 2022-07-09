@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			switch(*(format + 1))
 			{
 				case 'b':
-					q = va_rg(list, int);
+					q = va_arg(list, int);
 					rec_bin(q);
 					break;
 				case 'c':
