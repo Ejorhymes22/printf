@@ -7,7 +7,8 @@ int _printf(const char *format, ...);
 int print_num(va_list);
 void print_recurs_(int);
 int _putchar(char);
-void rec_bin(int);
+void rec_bin(unsigned int);
+int print_bin(va_list);
 int print_char(va_list);
 int print_string(va_list);
 
