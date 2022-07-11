@@ -35,14 +35,16 @@ void print_recurs_(int list)
 int print_num(va_list list)
 {
 	int s = va_arg(list, int);
-	int count = 0;
-
+	unsigned int count = 0;
+	unsigned int u;
 	print_recurs_(s);
 
 	if (s < 0)
-		s = -s;
+		u = -s;
+	else
+		u = s;
 
-	while (s)
-		count++, s /= 10;
+	while (u != 0)
+		count++, u /= 10;
 	return (count);
 }
