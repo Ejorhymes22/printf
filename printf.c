@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 	int tlen = 0;
 
 	if (!format || (*format == '%' && !(*(format + 1))))
-			return (-1);
+		return (-1);
 
 	va_start(list, format);
 	while (*format)

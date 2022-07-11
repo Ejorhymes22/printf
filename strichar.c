@@ -3,7 +3,7 @@
 
 /**
  * print_char - prints a character
- * @list - comes with the characteres
+ * @list: comes with the characteres
  *
  * Return: number of characters
  */
@@ -19,7 +19,7 @@ int print_char(va_list list)
 
 /**
  * print_string - prints a string
- * @list - list argument
+ * @list: list argument
  *
  * Return: length of the string
  */

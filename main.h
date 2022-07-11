@@ -13,7 +13,15 @@ int print_string(va_list);
 
 int (*get_print(char s))(va_list list);
 
-typedef struct spec{
+/**
+ * struct spec - specification structure
+ *
+ * @spec: specification
+ * @f: function associated
+ */
+
+typedef struct spec
+{
 	char spec;
 	int (*f)(va_list list);
 } spec_t;
