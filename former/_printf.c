@@ -19,6 +19,9 @@ int _printf(const char *format, ...)
 	va_list list;
 	int q;
 
+	if (!format || *format == '%' && !(*(format + 1))
+			return (-1);
+
 	va_start(list, format);
 	while (*format)
 	{
@@ -65,6 +68,7 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
+	va_end(list);
 	return (j);
 }
 
