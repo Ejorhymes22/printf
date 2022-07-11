@@ -4,8 +4,8 @@
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
-int _strlen(char *);
-void _print_number(int);
+int print_num(va_list);
+void print_recurs_(int);
 int _putchar(char);
 void rec_bin(int);
 int print_char(va_list);
