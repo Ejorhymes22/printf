@@ -11,6 +11,10 @@ void rec_bin(unsigned int);
 int print_bin(va_list);
 int print_char(va_list);
 int print_string(va_list);
+int print_unsigned(va_list);
+int print_octal(va_list);
+int print_hex(va_list);
+int print_HEX(va_list);
 
 int (*get_print(char s))(va_list list);
 

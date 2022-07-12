@@ -17,11 +17,15 @@ int (*get_print(char s))(va_list list)
 		{'c', print_char},
 		{'d', print_num},
 		{'i', print_num},
-		{'b', print_bin}
+		{'b', print_bin},
+		{'u', print_unsigned},
+		{'o', print_octal},
+		{'x', print_hex},
+		{'X', print_HEX}
 	};
 	int i = 0;
 
-	while (i < 5)
+	while (i < 9)
 	{
 		if (pec[i].spec == s)
 			return (pec[i].f);
