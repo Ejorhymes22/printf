@@ -81,3 +81,70 @@ int print_address(va_list list)
 
 	return (a + 2);
 }
+
+/**
+ * print_rev - prints string in reverse
+ * @list: argument list
+ *
+ * Return: count
+ */
+
+int print_rev(va_list list)
+{
+	char *s = va_arg(list, char *);
+	int i = 0;
+	int j;
+
+	while (s[i])
+		i++;
+	i = i - 1;
+
+	j = i;
+	while (i >= 0)
+		_putchar(s[i--]);
+	return (j + 1);
+}
+
+
+/**
+ * print_rot - prints the rot13 of a string
+ * @list: list argument
+ *
+ * Return: count
+ */
+
+
+int print_rot(va_list list)
+{
+	char *s = va_arg(list, char *);
+	int i = 0;
+	int j = 0;
+	char *alpha = "abcdefghijklmnopqrstuvwxyz";
+	char *rot = "nmnopqrstuvwxyzabcdefghijkl";
+
+	while (s[i])
+	{
+			if ((s[i] >= 'a' && s[i] <= 'z') || (s[i] >= 'A' && s[i] <= 'Z'))
+			{
+				while (alpha[i])
+				{
+					if (s[i] == alpha[j])
+					{
+						_putchar(rot[j]);
+						break;
+					}
+					else if(s[i] == (alpha[j] - 32))
+					{
+						_putchar((rot[j] - 32));
+						break;
+					}
+					j++;
+				}
+				j = 0;
+			}
+			else
+				_putchar(s[i]);
+			i++;
+	}
+	return (i);
+}

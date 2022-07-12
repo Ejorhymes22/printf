@@ -17,6 +17,8 @@ int print_hex(va_list);
 int print_HEX(va_list);
 int print_S(va_list);
 int print_address(va_list);
+int print_rev(va_list);
+int print_rot(va_list);
 
 char *convert(unsigned long int, int);
 
