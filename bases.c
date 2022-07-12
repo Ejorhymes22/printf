@@ -13,19 +13,20 @@ int print_unsigned(va_list list)
 	char *str;
 	char buffer[50];
 	int i = 0;
+	char *rep = "0123456789";
 
 	str = &buffer[49];
 	*str = '\0';
 	do
 	{
-		*--str = (n % 10);
+		*--str = rep[n % 10];
 		n /= 10;
 		i++;
 	} while (n);
 
 	while (*str)
 	{
-		_putchar(*str + '0');
+		_putchar(*str);
 		str++;
 	}
 	return (i);
