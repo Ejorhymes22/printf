@@ -21,11 +21,13 @@ int (*get_print(char s))(va_list list)
 		{'u', print_unsigned},
 		{'o', print_octal},
 		{'x', print_hex},
-		{'X', print_HEX}
+		{'X', print_HEX},
+		{'S', print_S},
+		{'p', print_address}
 	};
 	int i = 0;
 
-	while (i < 9)
+	while (i < 11)
 	{
 		if (pec[i].spec == s)
 			return (pec[i].f);
