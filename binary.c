@@ -9,12 +9,20 @@
 
 void rec_bin(unsigned int i)
 {
-	if ((i / 2) == 0)
-		;
-	else
-		rec_bin(i / 2);
-	
-	_putchar((i % 2) + '0');
+	char *rep = "01";
+	char buffer[50];
+	char *str;
+
+	str = &buffer[49];
+
+	while (i)
+	{
+		*--str = rep[i % 2];
+		i /= 2;
+	}
+
+	while (*str)
+		_putchar(*str++);
 }
 
 int print_bin(va_list list)
