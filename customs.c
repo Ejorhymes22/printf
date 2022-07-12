@@ -67,10 +67,10 @@ int print_S(va_list list)
 int print_address(va_list list)
 {
 	unsigned long int n = va_arg(list, unsigned long int);
-	void *s;
+	char *s;
 	unsigned int a = 0;
 
-	s = (void *)convert(n, 0);
+	s = convert(n, 0);
 	_putchar('0');
 	_putchar('x');
 	while (*s)
