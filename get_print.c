@@ -29,7 +29,7 @@ int (*get_print(char s))(va_list list)
 	};
 	int i = 0;
 
-	while (i < 12)
+	while (i < 13)
 	{
 		if (pec[i].spec == s)
 			return (pec[i].f);

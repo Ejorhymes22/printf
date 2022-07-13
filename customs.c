@@ -120,7 +120,7 @@ int print_rot(va_list list)
 	int i = 0;
 	int j = 0;
 	char *alpha = "abcdefghijklmnopqrstuvwxyz";
-	char *rot = "nmnopqrstuvwxyzabcdefghijkl";
+	char *rot = "nopqrstuvwxyzabcdefghijklm";
 
 	while (s[i])
 	{
